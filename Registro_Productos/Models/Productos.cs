@@ -14,8 +14,9 @@ namespace Registro_Productos.Models
         public int ProductoId { get; set; }
         [Required(ErrorMessage ="Este campo no puede quedar vac&iacuteo, ingrese la descripcion del producto")]
         public string Descripcion { get; set; }
-        [Required(ErrorMessage ="Este campo no puede quedar vac&iacuteo, ingrese la existencia del producto")]
-        public int Existencia { get; set; }
+        [Required(ErrorMessage = "Este campo no puede quedar vac&iacuteo, ingrese la existencia del producto")]
+        [Range(0.5, 1000000, ErrorMessage = "Este campo debe ser mayor que 0")]
+        public float Existencia { get; set; }
         [Required(ErrorMessage ="Este campo no puede quedar vac&iacuteo, ingrese el costo del producto")]
         public float Costo { get; set; }
         public float ValorInventario { get; set; }
