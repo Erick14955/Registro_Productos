@@ -34,9 +34,9 @@
             </div>
             <div class="form-group">
                 <label>
-                    Descripci&oacute;n
+                    Descripci&oacuten
                 </label>
-                <InputText @bind-Value="Productos.Descripcion" clas="form-control" />
+                <InputText @bind-Value="Productos.Descripcion" class="form-control" />
                 <ValidationMessage For="@(() => Productos.Descripcion)" />
             </div>
 
@@ -55,12 +55,11 @@
                 <InputNumber @bind-Value="Productos.Costo" class="form-control" />
                 <ValidationMessage For="@(() => Productos.Costo)" />
             </div>
-
             <div class="form-group">
                 <label>
                     Valor en Inventario
                 </label>
-                <InputNumber @bind-Value="Productos.ValorInventario" class="form-group" />
+                <InputNumber @bind-Value="Productos.ValorInventario" class="form-control" readonly="true"/>
                 <ValidationMessage For="@(() => Productos.ValorInventario)"/>
             </div>
         </form>
